@@ -4,109 +4,177 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Arkana Tarot</title>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+
 <style>
+
 body {
     margin: 0;
-    background-color: #2E1A47;
-    color: #F2EFEA;
+    background: linear-gradient(180deg, #0d0d12, #16161f);
+    color: #EDE6D6;
     font-family: 'Montserrat', sans-serif;
     text-align: center;
 }
 
 .section {
-    padding: 80px 20px;
-    max-width: 900px;
+    padding: 100px 20px;
+    max-width: 1000px;
     margin: auto;
 }
 
-h1 {
-    font-family: 'Cinzel', serif;
-    font-size: 48px;
-    color: #D8B65A;
-    margin-bottom: 10px;
+.logo {
+    width: 180px;
+    margin-bottom: 20px;
 }
 
-h2 {
+h1, h2 {
     font-family: 'Cinzel', serif;
-    color: #D8B65A;
-    margin-top: 60px;
+    color: #C6A756;
+    letter-spacing: 2px;
 }
 
 p {
-    line-height: 1.6;
     font-size: 18px;
+    line-height: 1.8;
+    max-width: 700px;
+    margin: auto;
 }
 
 .button {
-    background-color: #D8B65A;
-    color: #2E1A47;
-    padding: 15px 30px;
+    background: transparent;
+    border: 2px solid #C6A756;
+    color: #C6A756;
+    padding: 15px 35px;
     text-decoration: none;
     display: inline-block;
     margin-top: 30px;
-    font-weight: bold;
-    border-radius: 30px;
+    border-radius: 40px;
+    transition: all 0.4s ease;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.button:hover {
+    background: #C6A756;
+    color: #0d0d12;
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(198,167,86,0.6);
 }
 
 .card {
     margin-top: 40px;
-    padding: 30px;
-    border: 1px solid #D8B65A;
+    padding: 40px;
+    border: 1px solid rgba(198,167,86,0.3);
+    border-radius: 20px;
+    background: rgba(255,255,255,0.03);
+    backdrop-filter: blur(6px);
+}
+
+.tarot-card {
+    margin-top: 40px;
+    width: 220px;
+    height: 360px;
     border-radius: 15px;
+    box-shadow: 0 0 30px rgba(198,167,86,0.4);
+    transition: transform 1s ease;
+}
+
+.spin {
+    transform: rotateY(720deg);
 }
 
 .footer {
-    background-color: #241337;
+    background-color: #0c0c10;
     padding: 40px 20px;
     font-size: 14px;
+    color: #999;
 }
+
+.social a {
+    color: #C6A756;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
 </style>
 </head>
 
 <body>
 
 <div class="section">
+    <img src="logo.png" alt="Arkana Logo" class="logo">
     <h1>ARKANA</h1>
-    <p>Tarot introspectivo y transformacional</p>
-    <p>Lecturas profundas para comprender tu presente, visualizar posibilidades y tomar decisiones conscientes.</p>
+    <p>Tarot introspectivo y transformacional enfocado en claridad, procesos y decisiones conscientes.</p>
     <a href="https://wa.me/573223407512" class="button">Agendar sesión</a>
 </div>
 
 <div class="section">
-    <h2>¿Cómo trabajo?</h2>
-    <p>Cada sesión está estructurada según el tiempo elegido. Exploramos la energía actual, patrones activos y escenarios posibles según tus decisiones.</p>
+    <h2>Sobre Nosotros</h2>
+    <p>En Arkana trabajamos el tarot como herramienta de comprensión profunda. Analizamos energías activas, patrones y escenarios posibles según tus decisiones. Cada sesión es un espacio de exploración consciente y acompañamiento profesional.</p>
+</div>
+
+<div class="section">
+    <h2>Carta del Día</h2>
+    <p>Descubre la energía que se abre hoy para ti.</p>
+    
+    <img id="cardImage" src="carta1.jpg" class="tarot-card">
+    <br>
+    <button class="button" onclick="spinCard()">Descubrir Carta</button>
 </div>
 
 <div class="section">
     <h2>Sesiones</h2>
 
     <div class="card">
-        <h3>30 minutos</h3>
-        <p>Ideal para una situación puntual. Análisis del estado energético actual y tendencia inmediata.</p>
+        <h3>30 Minutos</h3>
+        <p>Lectura puntual para claridad inmediata sobre una situación específica.</p>
     </div>
 
     <div class="card">
-        <h3>45 minutos</h3>
-        <p>Para situaciones más complejas. Exploración de dinámicas internas y proyección de escenarios.</p>
+        <h3>60 Minutos</h3>
+        <p>Lectura profunda para procesos, decisiones importantes y análisis completo de escenarios.</p>
     </div>
 
     <div class="card">
-        <h3>60 minutos</h3>
-        <p>Lectura profunda de proceso. Trabajo de patrones, bloqueos y caminos posibles.</p>
+        <h3>Tiempo Extra</h3>
+        <p>Extensión de sesión para profundizar en puntos clave que requieran mayor exploración.</p>
     </div>
 
 </div>
 
-<div class="section">
-    <h2>Contacto</h2>
-    <p>WhatsApp: +57 322 340 75 12</p>
-    <p>Instagram: @arkankatarot</p>
+<div class="section social">
+    <h2>Conecta con Arkana</h2>
+    <a href="https://instagram.com/arkankatarot" target="_blank">Instagram</a>
+    |
+    <a href="https://facebook.com/" target="_blank">Facebook</a>
 </div>
 
 <div class="footer">
-    <p>Arkana Tarot © 2026</p>
+    Arkana Tarot © 2026
 </div>
+
+<script>
+
+const cartas = [
+"carta1.jpg",
+"carta2.jpg",
+"carta3.jpg",
+"carta4.jpg",
+"carta5.jpg"
+];
+
+function spinCard() {
+    const card = document.getElementById("cardImage");
+    card.classList.add("spin");
+
+    setTimeout(() => {
+        const random = Math.floor(Math.random() * cartas.length);
+        card.src = cartas[random];
+        card.classList.remove("spin");
+    }, 1000);
+}
+
+</script>
 
 </body>
 </html>
