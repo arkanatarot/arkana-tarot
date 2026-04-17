@@ -44,7 +44,7 @@
       radial-gradient(circle at top, rgba(159, 114, 255, 0.18), transparent 28%),
       radial-gradient(circle at 80% 15%, rgba(216, 182, 90, 0.14), transparent 18%),
       linear-gradient(180deg, rgba(9, 5, 15, 0.15), rgba(9, 5, 15, 0.78)),
-      url("assets/img/ChatGPT Image 26 feb 2026, 21_58_22.png") center top / cover fixed no-repeat,
+      url("ChatGPT Image 26 feb 2026, 21_58_22.png") center top / cover fixed no-repeat,
       linear-gradient(180deg, #13081f 0%, #09050f 100%);
     min-height: 100vh;
     overflow-x: hidden;
@@ -129,7 +129,7 @@
   }
 
   .eyebrow {
-    font-size: 11px;
+    font-size: 12px;
     letter-spacing: 0.34em;
     text-transform: uppercase;
     color: var(--gold-soft);
@@ -149,7 +149,7 @@
     align-items: center;
     gap: 18px;
     color: var(--mist);
-    font-size: 14px;
+    font-size: 15px;
   }
 
   .topbar nav a:hover {
@@ -171,8 +171,8 @@
 
   .hero-grid {
     display: grid;
-    grid-template-columns: 1.12fr 0.88fr;
-    gap: 36px;
+    grid-template-columns: minmax(0, 1.18fr) minmax(280px, 0.82fr);
+    gap: 48px;
     align-items: center;
   }
 
@@ -184,7 +184,7 @@
     border-radius: var(--radius-xl);
     box-shadow: var(--shadow);
     overflow: hidden;
-    text-align: center;
+    text-align: left;
   }
 
   .hero-copy::before {
@@ -205,7 +205,7 @@
     background: rgba(216, 182, 90, 0.12);
     border: 1px solid rgba(216, 182, 90, 0.2);
     color: var(--gold-soft);
-    font-size: 12px;
+    font-size: 13px;
     font-weight: 700;
     letter-spacing: 0.16em;
     text-transform: uppercase;
@@ -231,22 +231,22 @@
     line-height: 0.92;
     font-weight: 600;
     max-width: 12ch;
-    margin-inline: auto;
+    margin-inline: 0;
   }
 
   .hero-copy p {
     margin: 18px 0 0;
-    font-size: 18px;
-    line-height: 1.75;
+    font-size: 19px;
+    line-height: 1.8;
     color: var(--mist);
     max-width: 62ch;
-    margin-inline: auto;
-    text-align: center;
+    margin-inline: 0;
+    text-align: left;
     text-wrap: pretty;
   }
 
   .lead {
-    font-size: 20px;
+    font-size: 22px;
     color: var(--ivory);
   }
 
@@ -255,7 +255,7 @@
     display: flex;
     flex-wrap: wrap;
     gap: 14px;
-    justify-content: center;
+    justify-content: flex-start;
   }
 
   .button,
@@ -271,7 +271,7 @@
     border: 0;
     cursor: pointer;
     font-family: inherit;
-    font-size: 15px;
+    font-size: 16px;
   }
 
   .button {
@@ -304,7 +304,7 @@
     border-radius: 18px;
     background: rgba(255, 255, 255, 0.04);
     border: 1px solid rgba(255, 255, 255, 0.07);
-    text-align: center;
+    text-align: left;
     transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease;
   }
 
@@ -317,7 +317,7 @@
   .icon-orb {
     width: 60px;
     height: 60px;
-    margin: 0 auto 14px;
+    margin: 0 0 14px;
     border-radius: 50%;
     display: grid;
     place-items: center;
@@ -348,15 +348,15 @@
     display: block;
     margin-bottom: 8px;
     color: var(--gold-soft);
-    font-size: 13px;
+    font-size: 14px;
     text-transform: uppercase;
     letter-spacing: 0.1em;
   }
 
   .note span {
     color: var(--mist);
-    font-size: 14px;
-    line-height: 1.6;
+    font-size: 15px;
+    line-height: 1.7;
   }
 
   .hero-visual {
@@ -364,7 +364,7 @@
     min-height: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
   }
 
   .logo-panel {
@@ -434,7 +434,7 @@
   }
 
   .sprite-moonseal {
-    background-image: url("assets/img/Diseño sin título.png");
+    background-image: url("Diseño sin título.png");
   }
 
   .logo-sprite::after {
@@ -449,13 +449,14 @@
 
   .floating-card {
     position: relative;
-    width: min(100%, 260px);
-    padding: 22px;
+    width: min(100%, 360px);
+    padding: 28px;
     border-radius: 24px;
     background: rgba(12, 7, 21, 0.9);
     border: 1px solid rgba(216, 182, 90, 0.2);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
     backdrop-filter: blur(16px);
+    text-align: center;
   }
 
   .floating-card .eyebrow {
@@ -466,7 +467,7 @@
     margin: 0;
     color: var(--mist);
     line-height: 1.65;
-    font-size: 15px;
+    font-size: 17px;
     text-align: center;
     text-wrap: pretty;
   }
@@ -491,14 +492,43 @@
   .section-heading p {
     margin: 0;
     color: var(--mist);
-    line-height: 1.75;
-    font-size: 17px;
+    line-height: 1.8;
+    font-size: 18px;
+  }
+
+  .value-strip {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+    margin-top: 26px;
+  }
+
+  .value-point {
+    padding: 20px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    text-align: left;
+  }
+
+  .value-point strong {
+    display: block;
+    color: var(--gold-soft);
+    font-size: 15px;
+    margin-bottom: 8px;
+    letter-spacing: 0.04em;
+  }
+
+  .value-point span {
+    color: var(--mist);
+    font-size: 16px;
+    line-height: 1.7;
   }
 
   .experience {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 20px;
+    gap: 22px;
   }
 
   .experience-card,
@@ -513,7 +543,7 @@
 
   .experience-card,
   .session-card {
-    text-align: center;
+    text-align: left;
   }
 
   .experience-card span,
@@ -527,7 +557,7 @@
     border-radius: 999px;
     background: rgba(216, 182, 90, 0.12);
     color: var(--gold-soft);
-    font-size: 12px;
+    font-size: 13px;
     font-weight: 700;
     letter-spacing: 0.14em;
     text-transform: uppercase;
@@ -547,9 +577,9 @@
   .contact-card p {
     margin: 14px 0 0;
     color: var(--mist);
-    line-height: 1.75;
-    font-size: 16px;
-    text-align: center;
+    line-height: 1.8;
+    font-size: 17px;
+    text-align: left;
     text-wrap: pretty;
   }
 
@@ -566,12 +596,12 @@
     background: linear-gradient(180deg, rgba(12, 8, 22, 0.88), rgba(18, 11, 30, 0.74));
     border: 1px solid rgba(216, 182, 90, 0.18);
     box-shadow: var(--shadow);
-    text-align: center;
+    text-align: left;
   }
 
   .ritual-panel strong {
     color: var(--gold-soft);
-    font-size: 13px;
+    font-size: 14px;
     letter-spacing: 0.18em;
     text-transform: uppercase;
   }
@@ -584,10 +614,10 @@
 
   .ritual-panel p {
     color: var(--mist);
-    line-height: 1.8;
-    font-size: 16px;
+    line-height: 1.85;
+    font-size: 17px;
     margin-top: 16px;
-    text-align: center;
+    text-align: left;
     text-wrap: pretty;
   }
 
@@ -598,8 +628,8 @@
 
   .step {
     display: grid;
-    grid-template-columns: 58px 1fr;
-    gap: 18px;
+    grid-template-columns: 74px 1fr;
+    gap: 20px;
     align-items: start;
     padding: 22px;
     border-radius: 22px;
@@ -617,6 +647,7 @@
     flex-direction: column;
     align-items: center;
     gap: 8px;
+    padding-top: 2px;
   }
 
   .step-number span {
@@ -634,16 +665,16 @@
   .step p {
     margin: 10px 0 0;
     color: var(--mist);
-    line-height: 1.7;
-    font-size: 15px;
-    text-align: center;
+    line-height: 1.8;
+    font-size: 16px;
+    text-align: left;
     text-wrap: pretty;
   }
 
   .sessions-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 20px;
+    gap: 22px;
   }
 
   .session-card {
@@ -675,8 +706,8 @@
 
   .contact-grid {
     display: grid;
-    grid-template-columns: 1.15fr 0.85fr;
-    gap: 20px;
+    grid-template-columns: minmax(0, 1.05fr) minmax(280px, 0.95fr);
+    gap: 26px;
     padding-bottom: 72px;
   }
 
@@ -702,7 +733,7 @@
   .contact-item a {
     display: inline-block;
     font-family: "Cormorant Garamond", serif;
-    font-size: 34px;
+    font-size: 38px;
     line-height: 1;
     font-weight: 600;
     color: var(--gold-soft);
@@ -738,7 +769,7 @@
   .daily-card {
     display: grid;
     grid-template-columns: 0.92fr 1.08fr;
-    gap: 24px;
+    gap: 28px;
     align-items: stretch;
   }
 
@@ -790,7 +821,7 @@
   .tarot-card-back {
     background:
       linear-gradient(180deg, rgba(10, 6, 18, 0.1), rgba(10, 6, 18, 0.18)),
-      url("assets/img/ChatGPT Image 18 mar 2026, 18_55_02.png") center center / cover no-repeat;
+      url("ChatGPT Image 18 mar 2026, 18_55_02.png") center center / cover no-repeat;
   }
 
   .tarot-card-front {
@@ -822,7 +853,7 @@
   .card-art::before {
     content: attr(data-art);
     color: rgba(246, 241, 232, 0.72);
-    font-size: 15px;
+    font-size: 16px;
     letter-spacing: 0.08em;
     text-transform: uppercase;
     text-align: center;
@@ -873,7 +904,7 @@
     display: block;
     margin-bottom: 6px;
     color: var(--gold-soft);
-    font-size: 12px;
+    font-size: 13px;
     letter-spacing: 0.12em;
     text-transform: uppercase;
   }
@@ -881,9 +912,26 @@
   .reading-chip span,
   .card-day-reading p {
     color: var(--mist);
-    line-height: 1.75;
-    text-align: center;
+    line-height: 1.8;
+    text-align: left;
     text-wrap: pretty;
+    font-size: 17px;
+  }
+
+  @media (max-width: 1320px) {
+    .experience,
+    .sessions-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .value-strip {
+      grid-template-columns: 1fr;
+    }
+
+    .hero-grid {
+      grid-template-columns: minmax(0, 1.08fr) minmax(300px, 0.92fr);
+      gap: 36px;
+    }
   }
 
   footer {
@@ -939,6 +987,39 @@
 
     .hero-copy {
       padding: 36px 28px;
+    }
+
+    .hero-copy,
+    .note,
+    .value-point,
+    .experience-card,
+    .session-card,
+    .ritual-panel,
+    .step,
+    .floating-card {
+      text-align: center;
+    }
+
+    h1,
+    .hero-copy p,
+    .ritual-panel p,
+    .step p,
+    .experience-card p,
+    .session-card p,
+    .contact-card p,
+    .card-day-reading p,
+    .reading-chip span,
+    .value-point span {
+      text-align: center;
+      margin-inline: auto;
+    }
+
+    .hero-actions {
+      justify-content: center;
+    }
+
+    .icon-orb {
+      margin-inline: auto;
     }
   }
 
@@ -1050,8 +1131,8 @@
         <div class="hero-copy">
           <div class="badge">Lecturas profundas y conscientes</div>
           <h1>Claridad para comprender tu presente y decidir con más conciencia.</h1>
-          <p class="lead">Arkana Tarot ofrece lecturas introspectivas y transformacionales para ayudarte a reconocer lo que estás viviendo, identificar patrones y abrir nuevas posibilidades.</p>
-          <p>Cada sesión es un espacio de escucha, profundidad y orientación. Más que responder una pregunta puntual, la lectura busca darte perspectiva sobre tu proceso para que puedas avanzar con mayor claridad.</p>
+          <p class="lead">Arkana Tarot ofrece lecturas introspectivas y transformacionales para ayudarte a reconocer lo que estás viviendo, identificar patrones y abrir nuevas posibilidades en amor, decisiones, propósito y procesos personales.</p>
+          <p>Cada sesión es un espacio de escucha, profundidad y orientación. Más que responder una pregunta puntual, la lectura busca darte perspectiva sobre tu proceso, ordenar lo que sientes y ayudarte a avanzar con una visión más clara.</p>
 
           <div class="hero-actions">
             <a href="https://wa.me/573223407512" class="button" target="_blank" rel="noreferrer">Reservar por WhatsApp</a>
@@ -1081,6 +1162,21 @@
               <span>Exploramos escenarios posibles según tus decisiones, tu energía y tu apertura al cambio.</span>
             </div>
           </div>
+
+          <div class="value-strip">
+            <div class="value-point">
+              <strong>Ideal si buscas</strong>
+              <span>Claridad emocional, guía en relaciones, comprensión de bloqueos o dirección para una decisión importante.</span>
+            </div>
+            <div class="value-point">
+              <strong>Lo que te llevas</strong>
+              <span>Una lectura clara, una sensación de orden interno y señales concretas para moverte con más seguridad.</span>
+            </div>
+            <div class="value-point">
+              <strong>Enfoque de la sesión</strong>
+              <span>Profundo, sensible y consciente. Sin fatalismo, con mirada intuitiva y aterrizada a tu realidad.</span>
+            </div>
+          </div>
         </div>
 
         <div class="hero-visual">
@@ -1096,26 +1192,26 @@
     <section id="experiencia">
       <div class="section-heading">
         <h2>Una experiencia pensada para la introspección</h2>
-        <p>La propuesta une sensibilidad, elegancia y claridad. Cada sección acompaña al visitante desde la conexión inicial con la marca hasta la decisión de reservar su lectura.</p>
+        <p>La propuesta une sensibilidad, elegancia y claridad. Cada sección acompaña a la persona desde la conexión inicial con la marca hasta la decisión de reservar una lectura que le aporte dirección real.</p>
       </div>
 
       <div class="experience">
         <article class="experience-card">
           <span>01</span>
           <h3>Escucha</h3>
-          <p>Todo comienza con tu contexto actual y con la intención que deseas explorar en la sesión.</p>
+          <p>Todo comienza con tu contexto actual, tu pregunta y la intención que deseas explorar en la sesión.</p>
         </article>
 
         <article class="experience-card">
           <span>02</span>
           <h3>Profundidad</h3>
-          <p>La lectura profundiza en energías, patrones y tendencias sin dejar de reconocer tu capacidad de elección.</p>
+          <p>La lectura profundiza en energías, patrones y tendencias sin perder de vista tu poder de elección y transformación.</p>
         </article>
 
         <article class="experience-card">
           <span>03</span>
           <h3>Claridad</h3>
-          <p>Te llevas una visión más ordenada de tu proceso y señales concretas para tomar decisiones con más calma.</p>
+          <p>Te llevas una visión más ordenada de tu proceso, mensajes clave y señales concretas para decidir con más calma.</p>
         </article>
       </div>
     </section>
@@ -1126,7 +1222,7 @@
           <strong>¿Cómo trabajo?</strong>
           <h2>Una lectura guiada según la profundidad que necesites.</h2>
           <p>Cada sesión se adapta al momento que estás viviendo. Puede enfocarse en una pregunta puntual o abrir un proceso más amplio para comprender decisiones, relaciones, bloqueos o movimientos internos que hoy necesitan claridad.</p>
-          <p>El tarot aquí no se presenta como una sentencia, sino como una herramienta de comprensión: revela tendencias, ordena lo que sientes y te ayuda a elegir con mayor conciencia.</p>
+          <p>El tarot aquí no se presenta como una sentencia, sino como una herramienta de comprensión. La intención es que salgas con más paz, más enfoque y una lectura útil para tu vida real.</p>
         </div>
 
         <div class="ritual-steps">
@@ -1229,28 +1325,28 @@
     <section id="sesiones">
       <div class="section-heading">
         <h2>Sesiones para distintos niveles de profundidad</h2>
-        <p>Elige la duración que mejor acompañe tu momento: desde una orientación puntual hasta una lectura más amplia y transformadora.</p>
+        <p>Elige la duración que mejor acompañe tu momento: desde una orientación puntual hasta una lectura amplia y transformadora, diseñada para procesos más sensibles o complejos.</p>
       </div>
 
       <div class="sessions-grid">
         <article class="session-card">
           <div class="time">30 min</div>
           <h3>Orientación puntual</h3>
-          <p>Ideal para una situación concreta. Revisamos tu energía actual y la tendencia más cercana para ayudarte a decidir con más claridad.</p>
+          <p>Ideal para una situación concreta. Revisamos tu energía actual, la tendencia más cercana y el punto clave que necesitas comprender ahora.</p>
           <a href="https://wa.me/573223407512?text=Hola%2C%20quiero%20agendar%20la%20sesion%20de%2030%20minutos%20de%20Arkana%20Tarot." class="button-secondary" target="_blank" rel="noreferrer">Quiero esta sesión</a>
         </article>
 
         <article class="session-card">
           <div class="time">45 min</div>
           <h3>Lectura intermedia</h3>
-          <p>Recomendada para temas más complejos. Profundizamos en dinámicas internas, vínculos entre factores y posibles escenarios según tus movimientos.</p>
+          <p>Recomendada para temas más complejos. Profundizamos en dinámicas internas, vínculos entre factores y escenarios posibles según tus movimientos.</p>
           <a href="https://wa.me/573223407512?text=Hola%2C%20quiero%20agendar%20la%20sesion%20de%2045%20minutos%20de%20Arkana%20Tarot." class="button-secondary" target="_blank" rel="noreferrer">Quiero esta sesión</a>
         </article>
 
         <article class="session-card">
           <div class="time">60 min</div>
           <h3>Profundidad total</h3>
-          <p>Una sesión amplia para procesos importantes. Observamos patrones, bloqueos, oportunidades y caminos posibles con mayor detalle y perspectiva.</p>
+          <p>Una sesión amplia para procesos importantes. Observamos patrones, bloqueos, oportunidades y caminos posibles con mayor detalle, profundidad y perspectiva.</p>
           <a href="https://wa.me/573223407512?text=Hola%2C%20quiero%20agendar%20la%20sesion%20de%2060%20minutos%20de%20Arkana%20Tarot." class="button-secondary" target="_blank" rel="noreferrer">Quiero esta sesión</a>
         </article>
       </div>
@@ -1259,13 +1355,13 @@
     <section id="contacto">
       <div class="section-heading">
         <h2>Reserva tu lectura</h2>
-        <p>Si sientes que es momento de comprender con más profundidad lo que estás viviendo, puedes escribir directamente por WhatsApp o contactar la marca por Instagram.</p>
+        <p>Si sientes que es momento de comprender con más profundidad lo que estás viviendo, puedes escribir directamente por WhatsApp o contactar la marca por Instagram. La reserva es simple, cercana y pensada para acompañarte desde el primer contacto.</p>
       </div>
 
       <div class="contact-grid">
         <div class="contact-card">
           <h3>Contacto</h3>
-          <p>La experiencia fue pensada para transmitir intimidad, elegancia y claridad desde el primer instante. Ahora el contenido acompaña mejor esa atmósfera y guía al usuario hacia la reserva.</p>
+          <p>La experiencia fue pensada para transmitir intimidad, elegancia y claridad desde el primer instante. Si ya sientes que esta lectura es para ti, puedes reservar ahora mismo y dar el primer paso hacia una comprensión más profunda de tu proceso.</p>
 
           <div class="contact-list">
             <div class="contact-item">
@@ -1281,7 +1377,7 @@
 
         <aside class="contact-card contact-note">
           <div>
-            <img src="assets/img/ChatGPT Image 26 feb 2026, 21_42_28.png" alt="Firma Creado por Arkana Tarot" style="width: min(100%, 320px); margin: 0 auto 22px; display: block; filter: drop-shadow(0 0 18px rgba(242, 216, 137, 0.18));">
+            <img src="ChatGPT Image 26 feb 2026, 21_42_28.png" alt="Firma Creado por Arkana Tarot" style="width: min(100%, 320px); margin: 0 auto 22px; display: block; filter: drop-shadow(0 0 18px rgba(242, 216, 137, 0.18));">
             <p>Un espacio para mirar hacia adentro, comprender tu presente y abrir nuevas posibilidades.</p>
           </div>
         </aside>
